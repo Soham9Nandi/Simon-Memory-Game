@@ -52,7 +52,7 @@ function playSound(color){
 
 //Listening to the whole document for the key press, Starting the game.
 if (level==0){
-    $(document).on("keydown",sequenceAddition);
+    $("button").on("click",sequenceAddition);
 }
 
 function checkAnswer(currentLevel){
@@ -61,7 +61,7 @@ function checkAnswer(currentLevel){
         let failureSound = new Audio("./sounds/wrong.mp3");
         failureSound.play();
         //Change h1
-        $("h1").text("Game Over, Press Any Key to Restart");
+        $("h1").text("Game Over, Press START to Play Again!");
         //Flash the screen red
         $("body").addClass("game-over");
         setTimeout(function(){

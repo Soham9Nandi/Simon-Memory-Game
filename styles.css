@@ -52,9 +52,25 @@ body {
   background-color: grey;
 }
 
+button {
+  margin-bottom: 50px;
+  margin-top: 10p;
+  background-color: #E9762B;
+  border: none;
+  color: #F1F0E9;
+  font-weight: bolder;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Press Start 2P', cursive;
+  border-radius: 10px;
+  border: 3px solid black;
+  
+}
+
 @media screen and (max-width: 1150px) {
   .container {
-    padding-top: 100px;
+    padding-top: 30px;
     display: block;
     width: 100%;
     margin: auto;
@@ -65,6 +81,7 @@ body {
     margin:  5%;
     padding-top: 30px;
     color: #FEF2BF;
+    
   }
   .btn {
     margin: 25px;
