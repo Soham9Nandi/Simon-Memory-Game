@@ -3,6 +3,7 @@ let buttonColours = ['green','red','yellow','blue'];
 let gamePattern = [];
 var clickedPattern = [];
 let level = 0;
+let highScore = 0;
 
 //Function to create the next upcoming sequence
 function nextSequence(){
@@ -22,7 +23,12 @@ function sequenceAddition(){
     playSound(nextColour);
     //Updating and changing the displayed level
     level +=1;
-    $("h1").text(`Level ${level}`)
+    $("#level-title").text(`Level ${level}`)
+    if (highScore<level){
+        highScore = level;
+        $("#high-score").text(`Highest Score: ${highScore}`)
+    }
+
 }
 
 
@@ -64,7 +70,7 @@ function checkAnswer(currentLevel){
         let failureSound = new Audio("./sounds/wrong.mp3");
         failureSound.play();
         //Change h1
-        $("h1").text("Game Over, Press START to Play Again!");
+        $("level-title").text("Game Over, Press START to Play Again!");
         //Flash the screen red
         $("body").addClass("game-over");
         setTimeout(function(){
