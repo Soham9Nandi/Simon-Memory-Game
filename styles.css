@@ -97,13 +97,12 @@ button {
     border: 10px solid black;
     border-radius: 20%;
   }
-  .game-over {
-    background-color: red;
-    opacity: 0.8;
-  }
   
 }
-@media screen and (max-width:540px){
+@media screen and (max-width:420px){
+  h1{
+    font-size: 10px;
+  }
   .btn {
     margin: 25px;
     display: inline-block;
@@ -111,10 +110,6 @@ button {
     width: 15vh;
     border: 10px solid black;
     border-radius: 20%;
-  }
-  .game-over {
-    background-color: red;
-    opacity: 0.8;
   }
   
 }
