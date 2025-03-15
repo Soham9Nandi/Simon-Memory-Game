@@ -51,9 +51,12 @@ function playSound(color){
 }
 
 //Listening to the whole document for the key press, Starting the game.
-if (level==0){
-    $("button").on("click",sequenceAddition);
-}
+
+$("button").on("click", ()=>{
+    sequenceAddition();
+    $("button").on("click", $("button").slideUp("slow"))
+});
+
 
 function checkAnswer(currentLevel){
     if (gamePattern[currentLevel] != clickedPattern[currentLevel]){
@@ -87,4 +90,5 @@ function startOver(){
     gamePattern = [];
     clickedPattern = [];
     level = 0;
+    $("button").slideDown("slow");
 }
